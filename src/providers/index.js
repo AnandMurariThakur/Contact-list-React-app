@@ -1,6 +1,7 @@
 import { createContext } from "react";
 import { useProviderContacts } from "../hooks";
 
+//here we have configure our provider with initial state using createContext
 const initialState = {
   contacts: [],
   loading: true,

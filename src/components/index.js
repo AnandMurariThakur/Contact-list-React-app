@@ -1,3 +1,4 @@
+//we have import all the component here
 import App from "./App";
 import Loader from "./Loader";
 import Navbar from "./Navbar";

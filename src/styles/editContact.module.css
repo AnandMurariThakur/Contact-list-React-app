@@ -1,4 +1,5 @@
-.settings {
+/* added all the styling for add contact and edit pages  */
+.addContact {
   display: block;
   flex-direction: column;
   background: #fff;
@@ -11,20 +12,20 @@
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-.settings .imgContainer {
+.addContact .imgContainer {
   display: flex;
   margin-bottom: 40px;
   justify-content: center;
 }
-.settings .imgContainer img {
+.addContact .imgContainer img {
   height: 100px;
 }
-.settings .btnGrp {
+.addContact .btnGrp {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.settings button {
+.addContact button {
   border-radius: 6px;
   padding: 10px;
   width: fit-content;
@@ -32,34 +33,34 @@
   border-radius: 3px;
   margin-top: 20px;
 }
-.settings button:hover {
+.addContact button:hover {
   cursor: pointer;
 }
-.settings button:focus {
+.addContact button:focus {
   outline: none;
 }
 
-.settings .saveBtn {
+.addContact .saveBtn {
   background: #6200ee;
   color: #fff;
   border: none;
   padding: 10px 20px;
 }
 
-.settings .backBtn {
+.addContact .backBtn {
   background: #db2828;
   color: #fff;
   border: none;
   padding: 10px 20px;
 }
-.settings .goBack:hover {
+.addContact .goBack:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-.settings .field {
+.addContact .field {
   margin-bottom: 10px;
 }
-.settings .field .fieldLabel {
+.addContact .field .fieldLabel {
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -67,7 +68,7 @@
   color: #9e9e9e;
   padding: 5px 0;
 }
-.settings .field input {
+.addContact .field input {
   margin-top: 6px;
   width: 100%;
   height: 35px;

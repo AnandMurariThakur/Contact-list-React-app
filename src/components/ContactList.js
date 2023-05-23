@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import "../styles/home.css";
 import { useContacts } from "../hooks";
+
+//contact list component will render all the contact, also we have used link to navigate edit contact page where we have pased the id of contact and we have the function to delete the contact from list here where we have passed the index to that contact is list and delete it with the help of it
+
 const ContactList = ({ contact, index }) => {
   const Contacts = useContacts();
 
@@ -9,7 +12,7 @@ const ContactList = ({ contact, index }) => {
   };
 
   return (
-    <div className="movie-card">
+    <div className="contact-card">
       <div className="left">
         <div className="detail">
           <p>

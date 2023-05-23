@@ -6,6 +6,13 @@ const NotFound = () => {
   return <h1>404 Page Not Found</h1>;
 };
 
+//we have used react-roter-dom to navigate between pages
+//Nabvar is the top most component
+//home page display all the contact
+//add contact page display add new contact form
+//edit contact page have the functionality to change the contact detail
+//not found will diplay if the try visit other other path which is not given in route
+
 function App() {
   return (
     <div className="App">

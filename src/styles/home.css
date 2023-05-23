@@ -6,7 +6,8 @@
   padding: 0 20px;
   box-sizing: border-box;
 }
-.movie-card {
+/* contact list compoent */
+.contact-card {
   background: #fff;
   padding: 10px 20px;
   border: none;
@@ -14,16 +15,16 @@
   box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #f1f1f1;
   display: flex;
 }
-.movie-card:not(:first-child) {
+.contact-card:not(:first-child) {
   margin-top: 20px;
 }
-.movie-card:last-child {
+.contact-card:last-child {
   margin-bottom: 50px;
 }
-.movie-card .left {
+.contact-card .left {
   flex: 1;
 }
-.movie-card .right {
+.contact-card .right {
   position: relative;
   flex: 1;
 }

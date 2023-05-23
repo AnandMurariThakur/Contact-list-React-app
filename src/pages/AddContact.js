@@ -28,6 +28,7 @@ const AddContact = () => {
     companyBs: "",
   });
 
+  //this method  will handle the update state
   const handleTextChange = (text, field) => {
     setStates((prev) => ({
       ...prev,
@@ -35,8 +36,8 @@ const AddContact = () => {
     }));
   };
 
+  //this method will check the empty state and give notification else we set the tempArray as it as give in contact api response and then make api call to add the contact, once we get the success reponse we will add our new contact in global state for contact list
   const handleUpdateContact = async () => {
-    console.log("Contacts.data.length");
     if (
       !states.name ||
       !states.username ||
@@ -116,12 +117,13 @@ const AddContact = () => {
     });
   };
 
+  //method to naviagte back to previous screen
   const handleBack = () => {
     navigate("/");
   };
 
   return (
-    <div className={styles.settings}>
+    <div className={styles.addContact}>
       <div className={styles.imgContainer}>
         <img
           src="https://cdn-icons-png.flaticon.com/256/8014/8014428.png"

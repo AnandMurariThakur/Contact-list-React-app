@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import styles from "../styles/navbar.module.css";
 
+//it contain an icon of app and button to navigate add contact page and we have styled in from navbar.module.css
+
 const Navbar = () => {
   return (
     <div className={styles.nav}>
@@ -13,7 +15,6 @@ const Navbar = () => {
           />
         </Link>
       </div>
-
       <div className={styles.rightNav}>
         <div className={styles.navLinks}>
           <ul>

@@ -6,12 +6,20 @@ Problem statement
 
 #
 
-- We have created our tooltip component and render inside the app.js
+- Index.js is our root file where we have bind the app.js with **react-toast-notifications** for notification and **ContactsProvider** for assecing the global state
 
-- We have also looped our component using map function to pass all the position _i.e_ **right**, **top**, **left**, **bottom** to our component
+- App.js is the container file where we have bind the Home.js, EditContact.js and AddContact.js with **react-router-dom** for routing
 
-- Once we get the position as props, we have created one function that will handle the position of tooltip as per position and return the styling to our div component
+- Fetch the api response and stored it into global state using context and used by Home.js to render the contact list
 
-> We all know that react provide does not provide on hover event but it provide as the mechanism to detect this event using **onMouseEnter** _&&_ **onMouseLeave**
+- We added all the styles in style folder for respective pages and component
 
-- We have manage our state using **onMouseEnter** _&&_ **onMouseLeave** functionality
+- We have created common method for calling the api in api folder also respective function to perform action
+
+- We have add Base URL in Util folder with common api merger function
+
+> From the contact list we have given button to update and delete contact also we have handle our global state on respection action, also we are merging the contact that have been added by as to our contact list
+
+- In editcontact.js we have passed the id, using which we filter the contact which we need to update, once user click update contact we all the api to update the contact and handle the global state for respective action
+
+- In addContact.js we have the form for getting contact detail and call the api for adding the contact once we get all detail and update the global state

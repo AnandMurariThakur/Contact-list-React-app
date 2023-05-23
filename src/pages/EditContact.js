@@ -30,6 +30,7 @@ const EditContact = () => {
     companyBs: "",
   });
 
+  //in useEffect we are setting the intial value of state by filtering by ID that we have passed from contactlist component with global state
   useEffect(() => {
     const user =
       Contacts.data &&
@@ -70,6 +71,7 @@ const EditContact = () => {
     }
   }, [Contacts, Id]);
 
+  //this method  will handle the update state
   const handleTextChange = (text, field) => {
     text.preventDefault();
     setStates((prev) => ({
@@ -78,6 +80,7 @@ const EditContact = () => {
     }));
   };
 
+  //this method will check the empty state and give notification else we set the tempArray as it as give in contact api response and then make api call to update the contact, once we get the success reponse we will update our global state with new value
   const handleUpdateContact = async () => {
     if (
       !states.name ||
@@ -141,12 +144,13 @@ const EditContact = () => {
     setSavingForm(false);
   };
 
+  //method to naviagte back to previous screen
   const handleBack = () => {
     navigate("/");
   };
 
   return (
-    <div className={styles.settings}>
+    <div className={styles.addContact}>
       <div className={styles.imgContainer}>
         <img
           src="https://cdn-icons-png.flaticon.com/256/8014/8014428.png"
