@@ -1,0 +1,35 @@
+.nav {
+  display: flex;
+  background: #6200ee;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  height: 40px;
+}
+.nav .rightNav {
+  display: flex;
+  color: #fff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+}
+.nav .navLinks ul {
+  display: flex;
+  list-style-type: none;
+}
+.nav .navLinks ul li {
+  padding: 0 4px;
+}
+.nav .navLinks ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.nav .navLinks ul li a:hover {
+  text-decoration: underline;
+}
+.nav .navLinks ul li:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,72 @@
+/* HOME PAGE */
+.home {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.movie-card {
+  background: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #f1f1f1;
+  display: flex;
+}
+.movie-card:not(:first-child) {
+  margin-top: 20px;
+}
+.movie-card:last-child {
+  margin-bottom: 50px;
+}
+.movie-card .left {
+  flex: 1;
+}
+.movie-card .right {
+  position: relative;
+  flex: 1;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+.footer .rating {
+  font-size: 20px;
+  font-weight: 600;
+}
+.footer button {
+  font-size: 15px;
+  padding: 7px 10px;
+  text-shadow: none;
+  border-radius: 3px;
+  border: none;
+  font-weight: 600;
+}
+
+.unfavourite-btn {
+  background-color: #6200ee;
+  color: #fff;
+  text-shadow: none;
+}
+.favourite-btn {
+  background-color: #db2828;
+  color: #fff;
+}
+.unfavourite-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+.unfavourite-btn a:hover {
+  text-decoration: underline;
+}
+.no-contact {
+  padding: 20px 0;
+  font-size: 20px;
+  color: #6d6d6d;
+}
