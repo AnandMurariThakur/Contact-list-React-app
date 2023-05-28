@@ -141,6 +141,7 @@ const EditContact = () => {
         appearance: "error",
       });
     }
+    navigate("/");
     setSavingForm(false);
   };
 

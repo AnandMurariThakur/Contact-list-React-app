@@ -33,8 +33,12 @@ export const useProviderContacts = () => {
 
   //updating our contact list by replacing the contact object at specific index in array
   const updateContact = (cont, id) => {
-    const newContacts = contacts;
-    newContacts[id - 1] = cont;
+    const newContacts = contacts.map((contact) => {
+      if (contact.id === id) {
+        return cont;
+      }
+      return contact;
+    });
     setContacts(newContacts);
   };
 
