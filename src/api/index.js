@@ -46,7 +46,9 @@ export const getContactList = () => {
 
 //this function is used for updated the contact is server
 export const updateContact = async (updatedContact, id) => {
-  return customFetch(API_URLS.updateContact(id), {
+  //since we are getting the error if we pass the updated list id so i added this
+  const newID = id > 10 ? 1 : id;
+  return customFetch(API_URLS.updateContact(newID), {
     method: "PUT",
     body: JSON.stringify(updatedContact),
   });

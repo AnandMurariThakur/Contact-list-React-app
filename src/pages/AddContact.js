@@ -98,23 +98,7 @@ const AddContact = () => {
       });
     }
     setSavingForm(false);
-    setStates({
-      id: "",
-      name: "",
-      username: "",
-      email: "",
-      street: "",
-      suite: "",
-      city: "",
-      zipcode: "",
-      lat: "",
-      lng: "",
-      phone: "",
-      website: "",
-      companyName: "",
-      companyCatchPhrase: "",
-      companyBs: "",
-    });
+    navigate("/");
   };
 
   //method to naviagte back to previous screen
