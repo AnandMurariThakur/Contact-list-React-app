@@ -7,18 +7,20 @@ import { ContactsProvider } from "./providers";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-//added ToastProvider which we are using for the notification
-//ContactsProvider is used to handle the the global state of contact
-//App is our root file of application where we have implemented the react-route-dom
+// Create a root element for rendering the React application
 
+// Render the application using React's StrictMode
 root.render(
   <React.StrictMode>
+    {/* ToastProvider is used for displaying notifications */}
     <ToastProvider
       autoDismiss={true}
       autoDismissTimeout={5000}
       placement={"top-left"}
     >
+      {/* ContactsProvider is used to handle the global state of contacts */}
       <ContactsProvider>
+        {/* App is the root file of the application where react-router-dom is implemented */}
         <App />
       </ContactsProvider>
     </ToastProvider>

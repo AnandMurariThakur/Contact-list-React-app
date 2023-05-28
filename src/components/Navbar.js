@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import styles from "../styles/navbar.module.css";
 
-//it contain an icon of app and button to navigate add contact page and we have styled in from navbar.module.css
+// Component for the navigation bar
+// It contains an app icon and a button to navigate to the Add Contact page
+// The styling is defined in the navbar.module.css file
 
 const Navbar = () => {
   return (
     <div className={styles.nav}>
       <div className={styles.leftDiv}>
+        {/* Link to navigate back to the home page */}
         <Link to="/">
           <img
             className={styles.logo}
@@ -18,6 +21,7 @@ const Navbar = () => {
       <div className={styles.rightNav}>
         <div className={styles.navLinks}>
           <ul>
+            {/* Link to navigate to the Add Contact page */}
             <li>
               <Link to="/addContact">Add Contact</Link>
             </li>

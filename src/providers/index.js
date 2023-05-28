@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import { useProviderContacts } from "../hooks";
 
-//here we have configure our provider with initial state using createContext
+// Define the initial state for the contacts context
 const initialState = {
   contacts: [],
   loading: true,
@@ -10,11 +10,15 @@ const initialState = {
   deleteContact: () => {},
 };
 
+// Create the contacts context using createContext and provide the initial state
 export const ContactsContext = createContext(initialState);
 
+// Create the ContactsProvider component which wraps the application with the contacts context
 export const ContactsProvider = ({ children }) => {
-  const auth = useProviderContacts();
+  const contacts = useProviderContacts();
   return (
-    <ContactsContext.Provider value={auth}>{children}</ContactsContext.Provider>
+    <ContactsContext.Provider value={contacts}>
+      {children}
+    </ContactsContext.Provider>
   );
 };

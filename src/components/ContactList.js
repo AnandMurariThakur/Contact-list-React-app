@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import "../styles/home.css";
 import { useContacts } from "../hooks";
 
-//contact list component will render all the contact, also we have used link to navigate edit contact page where we have pased the id of contact and we have the function to delete the contact from list here where we have passed the index to that contact is list and delete it with the help of it
-
+// Component to render a single contact card
 const ContactList = ({ contact, index }) => {
   const Contacts = useContacts();
 
+  // Function to handle contact deletion
   const handleDelete = (id) => {
     Contacts.deleteContact(id);
   };
@@ -15,6 +15,7 @@ const ContactList = ({ contact, index }) => {
     <div className="contact-card">
       <div className="left">
         <div className="detail">
+          {/* Display contact details */}
           <p>
             <strong>Name:</strong> {contact.name}
           </p>
@@ -55,6 +56,7 @@ const ContactList = ({ contact, index }) => {
         </div>
       </div>
       <div className="right">
+        {/* Display additional contact details */}
         <p>
           <strong>Phone:</strong> {contact.phone}
         </p>
@@ -75,10 +77,14 @@ const ContactList = ({ contact, index }) => {
             <strong>Business:</strong> {contact.company.bs}
           </li>
         </ul>
+
         <div className="footer">
+          {/* Link to navigate to the EditContact page */}
           <button className="unfavourite-btn">
             <Link to={`/editContact/${contact.id}`}>Update</Link>
           </button>
+
+          {/* Button to delete the contact */}
           <button className="favourite-btn" onClick={() => handleDelete(index)}>
             Delete
           </button>
@@ -87,4 +93,5 @@ const ContactList = ({ contact, index }) => {
     </div>
   );
 };
+
 export default ContactList;

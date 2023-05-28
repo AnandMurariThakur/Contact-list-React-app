@@ -1,4 +1,4 @@
-//this is loader component used for indicating whenever we are calling the api
+// Component used to indicate loading state when making API calls
 
 const Loader = () => {
   return <div className="app-spinner"></div>;

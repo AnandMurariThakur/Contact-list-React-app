@@ -1,3 +1,4 @@
+/* Styles for the body */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -8,7 +9,7 @@ body {
   background: #f1f1f1;
 }
 
-/* LOADER */
+/* Styles for the loader */
 .app-spinner {
   display: inline-block;
   width: 50px;
@@ -23,11 +24,13 @@ body {
   top: 45%;
   left: 50%;
 }
+
 @keyframes spin {
   to {
     -webkit-transform: rotate(360deg);
   }
 }
+
 @-webkit-keyframes spin {
   to {
     -webkit-transform: rotate(360deg);

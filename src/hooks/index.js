@@ -3,18 +3,18 @@ import { useToasts } from "react-toast-notifications";
 import { ContactsContext } from "../providers";
 import { getContactList } from "../api";
 
-//using our context here
+// Custom hook to access the contacts context
 export const useContacts = () => {
   return useContext(ContactsContext);
 };
 
-//add all the logic for our provider here
+// Custom hook for the contacts provider logic
 export const useProviderContacts = () => {
   const [contacts, setContacts] = useState(null);
   const [loading, setLoading] = useState(true);
   const { addToast } = useToasts();
 
-  //calling our initail api to fetch contact list here
+  // Fetch the contact list from the API on component mount
   useEffect(() => {
     const fetchContacts = async () => {
       const response = await getContactList();
@@ -31,7 +31,7 @@ export const useProviderContacts = () => {
     fetchContacts();
   }, [addToast]);
 
-  //updating our contact list by replacing the contact object at specific index in array
+  // Update a contact in the contact list by replacing the contact object at the specified index in the array
   const updateContact = (cont, id) => {
     const newContacts = contacts.map((contact) => {
       if (contact.id === id) {
@@ -42,16 +42,15 @@ export const useProviderContacts = () => {
     setContacts(newContacts);
   };
 
-  //adding the new contact object at end of our contact list array
+  // Add a new contact to the end of the contact list array
   const addContact = (cont) => {
-    const newContacts = contacts;
-    newContacts.push(cont);
+    const newContacts = [...contacts, cont];
     setContacts(newContacts);
   };
 
-  //deleting the contact from the list of specific index
+  // Delete a contact from the contact list at the specified index
   const deleteContact = (id) => {
-    const newContacts = contacts;
+    const newContacts = [...contacts];
     if (newContacts.length > 0) {
       newContacts.splice(id, 1);
     }
@@ -60,6 +59,8 @@ export const useProviderContacts = () => {
       appearance: "success",
     });
   };
+
+  // Return the contacts data, loading state, and the functions to update, add, and delete contacts
   return {
     data: contacts,
     loading,

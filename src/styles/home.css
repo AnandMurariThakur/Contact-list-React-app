@@ -1,4 +1,6 @@
 /* HOME PAGE */
+
+/* Styles for the home component */
 .home {
   width: 70%;
   margin: 0 auto;
@@ -6,7 +8,8 @@
   padding: 0 20px;
   box-sizing: border-box;
 }
-/* contact list compoent */
+
+/* Styles for the contact card component */
 .contact-card {
   background: #fff;
   padding: 10px 20px;
@@ -15,19 +18,25 @@
   box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #f1f1f1;
   display: flex;
 }
+
 .contact-card:not(:first-child) {
   margin-top: 20px;
 }
+
 .contact-card:last-child {
   margin-bottom: 50px;
 }
+
 .contact-card .left {
   flex: 1;
 }
+
 .contact-card .right {
   position: relative;
   flex: 1;
 }
+
+/* Styles for the footer component */
 .footer {
   position: absolute;
   bottom: 0;
@@ -37,10 +46,12 @@
   padding: 10px 20px;
   box-sizing: border-box;
 }
+
 .footer .rating {
   font-size: 20px;
   font-weight: 600;
 }
+
 .footer button {
   font-size: 15px;
   padding: 7px 10px;
@@ -50,22 +61,29 @@
   font-weight: 600;
 }
 
+/* Styles for the unfavourite button */
 .unfavourite-btn {
   background-color: #6200ee;
   color: #fff;
   text-shadow: none;
 }
-.favourite-btn {
-  background-color: #db2828;
-  color: #fff;
-}
+
 .unfavourite-btn a {
   text-decoration: none;
   color: #fff;
 }
+
 .unfavourite-btn a:hover {
   text-decoration: underline;
 }
+
+/* Styles for the favourite button */
+.favourite-btn {
+  background-color: #db2828;
+  color: #fff;
+}
+
+/* Styles for the no-contact message */
 .no-contact {
   padding: 20px 0;
   font-size: 20px;
